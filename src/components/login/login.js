@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { withRouter } from "react-router-dom";
+import { UserContext } from "../auth/UserContext";
 
-const Login = () => {
+const Login = ({ history }) => {
+  const { isAuth, setIsAuth } = useContext(UserContext);
+
   const initialFields = {
     username: "",
     password: "",
@@ -15,7 +19,11 @@ const Login = () => {
     });
   };
   const handleUserLogin = () => {
-    alert("Login success!");
+    setValues(initialFields);
+    setIsAuth(() => {
+      history.push("/profile");
+      return true;
+    });
   };
   return (
     <div>
@@ -47,4 +55,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withRouter(Login);
