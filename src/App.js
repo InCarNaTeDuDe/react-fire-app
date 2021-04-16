@@ -19,7 +19,7 @@ function App() {
     <Router>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Register</Link>
         </li>
         <li>
           <Link to="/profile">Profile</Link>
