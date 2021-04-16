@@ -1,0 +1,7 @@
+.signin__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 5px 10px;
+}

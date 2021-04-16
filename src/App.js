@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useMemo } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import LoginForm from "./components/login/login";
+import RegisterForm from "./components/register/RegisterForm";
 import ProtectedRoute from "./components/auth";
 import Profile from "./components/profile/profile";
 import { UserContext } from "./components/auth/UserContext";
@@ -34,7 +34,7 @@ function App() {
       {/* <button onClick={() => setIsAuth(!isAuth)}>Login</button> */}
 
       <UserContext.Provider value={value}>
-        <Route exact path="/" component={LoginForm} />
+        <Route exact path="/" component={RegisterForm} />
         <ProtectedRoute path="/about" component={About} />
         <ProtectedRoute path="/profile" component={Profile} />
       </UserContext.Provider>
