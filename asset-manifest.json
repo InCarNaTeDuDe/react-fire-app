@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-fire-app/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/react-fire-app/static/js/main.468e5719.chunk.js",
-    "main.js.map": "/react-fire-app/static/js/main.468e5719.chunk.js.map",
+    "main.css": "/react-fire-app/static/css/main.251570dc.chunk.css",
+    "main.js": "/react-fire-app/static/js/main.f06dee90.chunk.js",
+    "main.js.map": "/react-fire-app/static/js/main.f06dee90.chunk.js.map",
     "runtime-main.js": "/react-fire-app/static/js/runtime-main.acc5ea6e.js",
     "runtime-main.js.map": "/react-fire-app/static/js/runtime-main.acc5ea6e.js.map",
-    "static/js/2.03fadfc1.chunk.js": "/react-fire-app/static/js/2.03fadfc1.chunk.js",
-    "static/js/2.03fadfc1.chunk.js.map": "/react-fire-app/static/js/2.03fadfc1.chunk.js.map",
+    "static/js/2.406ad81b.chunk.js": "/react-fire-app/static/js/2.406ad81b.chunk.js",
+    "static/js/2.406ad81b.chunk.js.map": "/react-fire-app/static/js/2.406ad81b.chunk.js.map",
     "static/js/3.6b1338e1.chunk.js": "/react-fire-app/static/js/3.6b1338e1.chunk.js",
     "static/js/3.6b1338e1.chunk.js.map": "/react-fire-app/static/js/3.6b1338e1.chunk.js.map",
     "index.html": "/react-fire-app/index.html",
-    "static/css/main.ea1455b2.chunk.css.map": "/react-fire-app/static/css/main.ea1455b2.chunk.css.map",
-    "static/js/2.03fadfc1.chunk.js.LICENSE.txt": "/react-fire-app/static/js/2.03fadfc1.chunk.js.LICENSE.txt"
+    "static/css/main.251570dc.chunk.css.map": "/react-fire-app/static/css/main.251570dc.chunk.css.map",
+    "static/js/2.406ad81b.chunk.js.LICENSE.txt": "/react-fire-app/static/js/2.406ad81b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.acc5ea6e.js",
-    "static/js/2.03fadfc1.chunk.js",
-    "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.468e5719.chunk.js"
+    "static/js/2.406ad81b.chunk.js",
+    "static/css/main.251570dc.chunk.css",
+    "static/js/main.f06dee90.chunk.js"
   ]
 }
