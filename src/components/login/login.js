@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { withRouter } from "react-router-dom";
+import { db } from "../../firebase";
 import { UserContext } from "../auth/UserContext";
 
 const Login = ({ history }) => {
@@ -18,11 +19,21 @@ const Login = ({ history }) => {
       [name]: value,
     });
   };
-  const handleUserLogin = () => {
-    setValues(initialFields);
-    setIsAuth(() => {
-      history.push("/profile");
-      return true;
+  const handleUserLogin = async (e) => {
+    e.preventDefault();
+    const querySnapshot = await db
+      .collection("users")
+      .where("username", "==", values.username)
+      .get();
+
+    querySnapshot.forEach(function (doc) {
+      if (doc.exists) {
+        setValues(initialFields);
+        setIsAuth(() => {
+          history.push("/profile");
+          return true;
+        });
+      }
     });
   };
   return (
