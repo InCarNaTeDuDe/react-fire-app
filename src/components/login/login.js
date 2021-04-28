@@ -21,20 +21,36 @@ const Login = ({ history }) => {
   };
   const handleUserLogin = async (e) => {
     e.preventDefault();
-    const querySnapshot = await db
-      .collection("users")
-      .where("username", "==", values.username)
-      .get();
 
-    querySnapshot.forEach(function (doc) {
-      if (doc.exists) {
+    try {
+      const querySnapshot = await db
+        .collection("users")
+        .where("username", "==", values.username)
+        .where("password", "==", values.password)
+        .get();
+
+      const existingUser = querySnapshot.empty; // Will be false or existing user
+
+      if (!existingUser) {
+        // querySnapshot.forEach(function (doc) {
+        //   console.log("User Found:--", doc.data());
+        //   if (doc.exists) {
+        //     setValues(initialFields);
+        //     setIsAuth(() => {
+        //       history.push("/profile");
+        //       return true;
+        //     });
+        //   }
+        // });
+        setIsAuth(!isAuth);
+        history.push("/profile");
+      } else {
+        alert("User Not found");
         setValues(initialFields);
-        setIsAuth(() => {
-          history.push("/profile");
-          return true;
-        });
       }
-    });
+    } catch (error) {
+      console.error("ERR on Login:-", error);
+    }
   };
   return (
     <div>

@@ -28,23 +28,22 @@ const RegisterForm = ({ history }) => {
 
   const addUser = async (e) => {
     e.preventDefault();
-    let isExistingUser = false;
 
     const querySnapshot = await db
       .collection("users")
       .where("username", "==", values.username)
       .get();
 
-    querySnapshot.forEach(function (doc) {
-      isExistingUser = doc.exists;
-      alert(`User name exists!,Try with different user name`);
-    });
+    const isNewUser = querySnapshot.empty; // empty will be true, if no record exists in DB
 
-    if (!isExistingUser) {
+    if (isNewUser) {
       addUserToDB({
         username: values.username,
         password: values.password,
       });
+    } else {
+      alert("Seems to be an exising user, Please Login!");
+      setValues(initialFields);
     }
   };
 

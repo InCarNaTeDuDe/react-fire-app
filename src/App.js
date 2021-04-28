@@ -19,7 +19,7 @@ function App() {
     <Router>
       <ul>
         <li>
-          <Link to="/">Register</Link>
+          <Link to="/">{isAuth ? "Home" : "Register"}</Link>
         </li>
         <li>
           <Link to="/profile">Profile</Link>
