@@ -19,7 +19,7 @@ function App() {
     <Router>
       <ul>
         <li>
-          <Link to="/">{isAuth ? "Home" : "Register"}</Link>
+          <Link to="/">Register</Link>
         </li>
         <li>
           <Link to="/profile">Profile</Link>
@@ -28,10 +28,7 @@ function App() {
           <Link to="/about">About</Link>
         </li>
       </ul>
-
       <hr />
-
-      {/* <button onClick={() => setIsAuth(!isAuth)}>Login</button> */}
 
       <UserContext.Provider value={value}>
         <Route exact path="/" component={RegisterForm} />

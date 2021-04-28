@@ -4,12 +4,10 @@ import { withRouter } from "react-router-dom";
 import { db } from "../../firebase";
 
 import Login from "../login/login";
-
 import { UserContext } from "../auth/UserContext";
 
 const RegisterForm = ({ history }) => {
   const { isAuth, setIsAuth } = useContext(UserContext);
-  // console.log("login....");
 
   const initialFields = {
     username: "",
