@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-fire-app/static/css/main.251570dc.chunk.css",
-    "main.js": "/react-fire-app/static/js/main.2728a377.chunk.js",
-    "main.js.map": "/react-fire-app/static/js/main.2728a377.chunk.js.map",
+    "main.js": "/react-fire-app/static/js/main.fb623a6d.chunk.js",
+    "main.js.map": "/react-fire-app/static/js/main.fb623a6d.chunk.js.map",
     "runtime-main.js": "/react-fire-app/static/js/runtime-main.967ed119.js",
     "runtime-main.js.map": "/react-fire-app/static/js/runtime-main.967ed119.js.map",
     "static/js/2.7108a58c.chunk.js": "/react-fire-app/static/js/2.7108a58c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.967ed119.js",
     "static/js/2.7108a58c.chunk.js",
     "static/css/main.251570dc.chunk.css",
-    "static/js/main.2728a377.chunk.js"
+    "static/js/main.fb623a6d.chunk.js"
   ]
 }
