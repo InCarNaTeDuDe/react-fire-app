@@ -77,6 +77,7 @@ const RegisterForm = ({ history }) => {
                 value={values.username}
                 name="username"
                 onChange={handleInputChange}
+                placeholder="Enter Username"
                 required
               />
               <br />
@@ -87,6 +88,7 @@ const RegisterForm = ({ history }) => {
                 value={values.password}
                 name="password"
                 required
+                placeholder="Enter Password"
                 onChange={handleInputChange}
               />
               <br />

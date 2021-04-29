@@ -64,6 +64,7 @@ const Login = ({ history }) => {
           value={values.username}
           name="username"
           onChange={handleInputChange}
+          placeholder="Enter Username"
           required
         />
         <br />
@@ -73,6 +74,7 @@ const Login = ({ history }) => {
           type="text"
           value={values.password}
           name="password"
+          placeholder="Enter Password"
           required
           onChange={handleInputChange}
         />
