@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { UserContext } from "../auth/UserContext";
 
 const Profile = () => {
-  return <div>Welcome to profile</div>;
+  const { user } = useContext(UserContext);
+
+  return (
+    <div>
+      Hello, {user.username} <br />
+      Good to see you, Stay safe!
+    </div>
+  );
 };
 
 export default Profile;

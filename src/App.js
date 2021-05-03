@@ -10,14 +10,16 @@ const About = lazy(() => import("./components/about"));
 const Profile = lazy(() => import("./components/profile/profile"));
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
-  const value = useMemo(() => ({ isAuth, setIsAuth }), [isAuth, setIsAuth]);
+  const [user, setUser] = useState({
+    isLoggedIn: false,
+  });
+  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
   return (
     <Router>
       <ul>
         <li>
-          <Link to="/">{isAuth ? "Home" : "Register"}</Link>
+          <Link to="/">{user.isLoggedIn ? "Home" : "Register"}</Link>
         </li>
         <li>
           <Link to="/profile">Profile</Link>

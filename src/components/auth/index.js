@@ -4,14 +4,14 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const { isAuth } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   return (
     <Switch>
       <Route
         {...rest}
         render={(data) => {
-          return isAuth ? <Component /> : <Redirect to="/" />;
+          return user.isLoggedIn ? <Component /> : <Redirect to="/" />;
         }}
       />
     </Switch>

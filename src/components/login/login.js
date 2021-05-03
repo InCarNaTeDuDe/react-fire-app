@@ -6,7 +6,7 @@ import { db } from "../../firebase";
 import { UserContext } from "../auth/UserContext";
 
 const Login = ({ history }) => {
-  const { isAuth, setIsAuth } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   const initialFields = {
     username: "",
@@ -34,17 +34,13 @@ const Login = ({ history }) => {
       const existingUser = querySnapshot.empty; // Will be false or existing user
 
       if (!existingUser) {
-        // querySnapshot.forEach(function (doc) {
-        //   console.log("User Found:--", doc.data());
-        //   if (doc.exists) {
-        //     setValues(initialFields);
-        //     setIsAuth(() => {
-        //       history.push("/profile");
-        //       return true;
-        //     });
-        //   }
-        // });
-        setIsAuth(!isAuth);
+        querySnapshot.forEach(function (doc) {
+          if (doc.exists) {
+            setValues(initialFields);
+            setUser({ isLoggedIn: true, ...doc.data() });
+          }
+        });
+
         history.push("/profile");
       } else {
         alert("User Not found");
